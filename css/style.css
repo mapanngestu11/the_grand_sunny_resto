@@ -84,6 +84,13 @@ a {
   font-size: 1.4rem;
 }
 
+.logo img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(232, 163, 61, 0.4);
+}
+
 .nav-links {
   display: flex;
   gap: 2rem;
