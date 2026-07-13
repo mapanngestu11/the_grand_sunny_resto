@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reservation — The Grand Sunny Ship Restaurant</title>
+  <meta name="description" content="Reserve your table aboard The Grand Sunny. Choose your room, gather your crew, and set sail on a culinary voyage." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Cinzel:wght@400;600;700&family=Josefin+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="logo"><span class="sun">☀</span> The Grand Sunny</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="rooms.html">Our Rooms</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="reservation.html" class="active">Reservation</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="hero hero-page" style="--hero-image: url('images/room-crowsnest.png')">
+    <div class="hero-inner">
+      <p class="kicker">Drop Anchor With Us</p>
+      <h1>Reserve Your <span>Voyage</span></h1>
+      <p class="lead">Pick a room, name your crew, and we'll keep the lanterns lit for you.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container res-grid">
+
+      <div class="res-info reveal">
+        <h2>Before You Board</h2>
+        <p>
+          Reservations are recommended for all five rooms, and required for the
+          Crow's Nest Sky Bar (twelve seats only) and the Grand Voyage tasting course.
+          For private events and full-ship charters, contact our quartermaster directly.
+        </p>
+
+        <div class="info-line">
+          <div class="icon">⚓</div>
+          <div>
+            <h4>Boarding Location</h4>
+            <p>Pier 7, Grand Harbor — the ship with the sun figurehead. You can't miss her.</p>
+          </div>
+        </div>
+
+        <div class="info-line">
+          <div class="icon">🕐</div>
+          <div>
+            <h4>Sailing Hours</h4>
+            <p>Mon – Fri 11:00 – 23:00 · Sat – Sun 09:00 – 24:00 · Crow's Nest until 02:00</p>
+          </div>
+        </div>
+
+        <div class="info-line">
+          <div class="icon">📞</div>
+          <div>
+            <h4>Call the Quartermaster</h4>
+            <p>+1 (555) 010-SUNNY · ahoy@grandsunny.rest</p>
+          </div>
+        </div>
+
+        <div class="info-line">
+          <div class="icon">🎉</div>
+          <div>
+            <h4>Private Voyages</h4>
+            <p>Birthdays, weddings, and crew parties — any room can be chartered, or take the whole ship.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-card reveal">
+        <form data-demo>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="name">Captain's Name</label>
+              <input type="text" id="name" name="name" placeholder="Your full name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" />
+            </div>
+            <div class="form-group">
+              <label for="guests">Crew Size</label>
+              <select id="guests" name="guests" required>
+                <option value="">Select guests</option>
+                <option>1 – 2 guests</option>
+                <option>3 – 4 guests</option>
+                <option>5 – 8 guests</option>
+                <option>9 – 15 guests</option>
+                <option>Full room charter</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="date">Date</label>
+              <input type="date" id="date" name="date" required />
+            </div>
+            <div class="form-group">
+              <label for="time">Time</label>
+              <input type="time" id="time" name="time" required />
+            </div>
+            <div class="form-group full">
+              <label for="room">Choose Your Room</label>
+              <select id="room" name="room" required>
+                <option value="">Select a room</option>
+                <option>The Galley Dining Hall</option>
+                <option>Aquarium Lounge &amp; Bar</option>
+                <option>The Library Café</option>
+                <option>Crow's Nest Sky Bar</option>
+                <option>Lawn Deck Terrace</option>
+                <option>Grand Voyage — all five rooms</option>
+              </select>
+            </div>
+            <div class="form-group full">
+              <label for="notes">Special Requests</label>
+              <textarea id="notes" name="notes" rows="4" placeholder="Allergies, celebrations, window seats, marriage proposals..."></textarea>
+            </div>
+            <div class="form-group full">
+              <button type="submit" class="btn btn-gold" style="width: 100%">Set Sail — Book Now</button>
+            </div>
+          </div>
+          <p class="form-note">
+            This is a demo form. Connect it to your backend or booking service to receive real reservations.
+          </p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <span class="footer-logo">☀ The Grand Sunny</span>
+        <p>A ship restaurant inspired by the greatest voyages ever told. Five rooms, one crew, endless flavor.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="rooms.html">Our Rooms</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Opening Hours</h4>
+        <ul>
+          <li>Mon – Fri: 11:00 – 23:00</li>
+          <li>Sat – Sun: 09:00 – 24:00</li>
+          <li>Crow's Nest Bar: until 02:00</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>Pier 7, Grand Harbor</li>
+          <li>+1 (555) 010-SUNNY</li>
+          <li>ahoy@grandsunny.rest</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2026 The Grand Sunny Ship Restaurant. All rights reserved. — HTML Template
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

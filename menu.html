@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu — The Grand Sunny Ship Restaurant</title>
+  <meta name="description" content="The full menu aboard The Grand Sunny: sea-forged mains, galley classics, sweet treasures, and legendary drinks." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Cinzel:wght@400;600;700&family=Josefin+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="logo"><span class="sun">☀</span> The Grand Sunny</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="rooms.html">Our Rooms</a></li>
+        <li><a href="menu.html" class="active">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="reservation.html">Reservation</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="hero hero-page" style="--hero-image: url('images/room-galley.png')">
+    <div class="hero-inner">
+      <p class="kicker">From the Ship's Galley</p>
+      <h1>The <span>Treasure Menu</span></h1>
+      <p class="lead">Forged over open flame, pulled fresh from the sea, and served with a grin.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="kicker">Eat Like a Legend</p>
+        <h2>Captain's Selection</h2>
+        <p>Our chef's proudest plates, bound in the ship's log. Turn the pages to explore the full menu.</p>
+        <div class="divider"></div>
+      </div>
+
+      <div class="flipbook-wrap reveal">
+        <div class="flipbook" id="menuBook">
+
+          <div class="book-base left"><span>⚓<br />The Ship's Log</span></div>
+          <div class="book-base right">
+            <span>The End of the Menu<br />— but not the voyage —<br /><br /><a href="reservation.html" class="btn btn-gold">Book a Table</a></span>
+          </div>
+
+          <div class="sheet">
+            <div class="page front cover">
+              <div class="cover-inner">
+                <span class="cover-sun">☀</span>
+                <h3>The Treasure Menu</h3>
+                <p>The Grand Sunny<br />Ship Restaurant</p>
+                <span class="cover-hint">Click to open ›</span>
+              </div>
+            </div>
+            <div class="page back">
+              <h3>⚓ Starters &amp; Small Plates</h3>
+
+              <div class="menu-item">
+                <div class="info">
+                  <h4>Harbor Chowder <span class="badge">Crew Favorite</span></h4>
+                  <p>Creamy clam and corn chowder, smoked bacon, sourdough hardtack</p>
+                </div>
+                <div class="dots"></div>
+                <div class="price">$9</div>
+              </div>
+
+              <div class="menu-item">
+                <div class="info">
+                  <h4>Cannonball Croquettes</h4>
+                  <p>Crisp salt-cod croquettes with saffron aioli and lemon</p>
+                </div>
+                <div class="dots"></div>
+                <div class="price">$11</div>
+              </div>
+
+              <div class="menu-item">
+                <div class="info">
+                  <h4>Tangerine Grove Salad <span class="badge">Vegan</span></h4>
+                  <p>Deck-grown tangerines, baby greens, toasted almonds, citrus vinaigrette</p>
+                </div>
+                <div class="dots"></div>
+                <div class="price">$10</div>
+              </div>
+
+              <div class="menu-item">
+                <div class="info">
+                  <h4>Rope-Tied Calamari</h4>
+                  <p>Flash-fried squid, charred pepper salsa, black garlic dust</p>
+                </div>
+                <div class="dots"></div>
+                <div class="price">$13</div>
+              </div>
+
+              <span class="page-num">1</span>
+            </div>
+          </div>
+
+          <div class="sheet">
+            <div class="page front">
+              <h3>🍖 Galley Mains</h3>
+
+              <div class="menu-item">
+                <div class="info">
+                  <h4>Pirate's Feast Platter <span class="badge">For the Crew</span></h4>
+                  <p>Fire-roasted meat on the bone, sea salt potatoes, galley gravy — serves 3–4</p>
+                </div>
+                <div class="dots"></div>
+                <div class="price">$58</div>
+              </div>
+
+              <div class="menu-item">
+                <div class="info">
+                  <h4>Sea King Steak</h4>
+                  <p>Chargrilled swordfish steak, brown butter, capers, grilled lemon</p>
+                </div>
+                <div class="dots"></div>
+                <div class="price">$27</div>
+              </div>
+
+              <div class="menu-item">
+                <div class="info">
+                  <h4>All Blue Seafood Pot</h4>
+                  <p>Mussels, prawns, and catch of the day in a saffron-tomato broth</p>
+                </div>
+                <div class="dots"></div>
+                <div class="price">$29</div>
+              </div>
+
+              <div class="menu-item">
+                <div class="info">
+                  <h4>Navigator's Curry Rice</h4>
+                  <p>Slow-cooked golden curry, jasmine rice, pickled ginger, soft egg</p>
+                </div>
+                <div class="dots"></div>
+                <div class="price">$18</div>
+              </div>
+
+              <div class="menu-item">
+                <div class="info">
+                  <h4>Shipwright's Burger</h4>
+                  <p>Double smashed patties, aged cheddar, cola-barbecue glaze, deck fries</p>
+                </div>
+                <div class="dots"></div>
+                <div class="price">$19</div>
+              </div>
+
+              <span class="page-num">2</span>
+            </div>
+            <div class="page back">
+              <h3>🍰 Sweet Treasures</h3>
+
+              <div class="menu-item">
+                <div class="info">
+                  <h4>Devil Fruit Sorbet <span class="badge">Signature</span></h4>
+                  <p>Dragon fruit and passion fruit sorbet with a swirling sugar shell</p>
+                </div>
+                <div class="dots"></div>
+                <div class="price">$9</div>
+              </div>
+
+              <div class="menu-item">
+                <div class="info">
+                  <h4>Captain's Cotton-Candy Sundae</h4>
+                  <p>Vanilla soft serve, pink cotton candy cloud, cherry cannonballs</p>
+                </div>
+                <div class="dots"></div>
+                <div class="price">$10</div>
+              </div>
+
+              <div class="menu-item">
+                <div class="info">
+                  <h4>Library Lemon Tart</h4>
+                  <p>Torched meringue, shortbread crust, served with pot of earl grey</p>
+                </div>
+                <div class="dots"></div>
+                <div class="price">$8</div>
+              </div>
+
+              <span class="page-num">3</span>
+            </div>
+          </div>
+
+          <div class="sheet">
+            <div class="page front">
+              <h3>🍹 From the Aquarium Bar</h3>
+
+              <div class="menu-item">
+                <div class="info">
+                  <h4>Deep Blue Sunset <span class="badge">Signature</span></h4>
+                  <p>Butterfly-pea gin, yuzu, tonic — shifts color as you sip</p>
+                </div>
+                <div class="dots"></div>
+                <div class="price">$14</div>
+              </div>
+
+              <div class="menu-item">
+                <div class="info">
+                  <h4>Three Swords Old Fashioned</h4>
+                  <p>Triple-oak bourbon, smoked demerara, orange bitters</p>
+                </div>
+                <div class="dots"></div>
+                <div class="price">$15</div>
+              </div>
+
+              <div class="menu-item">
+                <div class="info">
+                  <h4>Thousand Sunny Punch <span class="badge">Zero Proof</span></h4>
+                  <p>Tangerine, mango, sparkling soda, deck-grown mint</p>
+                </div>
+                <div class="dots"></div>
+                <div class="price">$8</div>
+              </div>
+
+              <div class="menu-item">
+                <div class="info">
+                  <h4>Grog of the Grand Line</h4>
+                  <p>Spiced dark rum, lime, honey, hot or iced</p>
+                </div>
+                <div class="dots"></div>
+                <div class="price">$12</div>
+              </div>
+
+              <span class="page-num">4</span>
+            </div>
+            <div class="page back cover">
+              <div class="cover-inner">
+                <span class="cover-sun">🌊</span>
+                <h3>Bon Voyage</h3>
+                <p>Ask your server about<br />today's catch and the<br />Grand Voyage tasting course</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="flip-controls">
+          <button class="btn btn-outline flip-prev" disabled>‹ Previous Page</button>
+          <span class="flip-indicator">Cover</span>
+          <button class="btn btn-gold flip-next">Next Page ›</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container reveal">
+      <h2>Hungry Already?</h2>
+      <p>Drop anchor with us tonight — the galley fire is already lit.</p>
+      <a href="reservation.html" class="btn btn-gold">Book a Table</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <span class="footer-logo">☀ The Grand Sunny</span>
+        <p>A ship restaurant inspired by the greatest voyages ever told. Five rooms, one crew, endless flavor.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="rooms.html">Our Rooms</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Opening Hours</h4>
+        <ul>
+          <li>Mon – Fri: 11:00 – 23:00</li>
+          <li>Sat – Sun: 09:00 – 24:00</li>
+          <li>Crow's Nest Bar: until 02:00</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>Pier 7, Grand Harbor</li>
+          <li>+1 (555) 010-SUNNY</li>
+          <li>ahoy@grandsunny.rest</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2026 The Grand Sunny Ship Restaurant. All rights reserved. — HTML Template
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
