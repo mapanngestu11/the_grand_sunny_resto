@@ -113,6 +113,79 @@ a {
   border-color: var(--gold);
 }
 
+.has-dropdown {
+  position: relative;
+}
+
+.has-dropdown > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.has-dropdown > a::after {
+  content: "▾";
+  font-size: 0.65rem;
+  opacity: 0.75;
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 0.85rem);
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  min-width: 220px;
+  list-style: none;
+  padding: 0.55rem 0;
+  background: rgba(22, 41, 61, 0.98);
+  border: 1px solid rgba(232, 163, 61, 0.35);
+  border-radius: 10px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  z-index: 120;
+}
+
+.dropdown::before {
+  content: "";
+  position: absolute;
+  top: -0.85rem;
+  left: 0;
+  right: 0;
+  height: 0.85rem;
+}
+
+.dropdown li {
+  text-align: left;
+}
+
+.dropdown a {
+  display: block;
+  padding: 0.65rem 1.15rem;
+  border-bottom: none;
+  letter-spacing: 1.5px;
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.dropdown a:hover,
+.dropdown a.active {
+  color: var(--gold);
+  background: rgba(232, 163, 61, 0.1);
+  border-color: transparent;
+}
+
+.has-dropdown:hover > .dropdown,
+.has-dropdown:focus-within > .dropdown,
+.has-dropdown.open > .dropdown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
 .nav-toggle {
   display: none;
   background: none;
@@ -532,6 +605,39 @@ a {
 }
 
 /* ---------- Menu ---------- */
+
+.menu-cats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.7rem;
+  margin-bottom: 2.5rem;
+}
+
+.menu-cats a {
+  display: inline-block;
+  padding: 0.55rem 1.15rem;
+  border: 1px solid rgba(232, 163, 61, 0.35);
+  border-radius: 999px;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+  transition: background 0.25s, color 0.25s, border-color 0.25s;
+}
+
+.menu-cats a:hover,
+.menu-cats a.active {
+  background: rgba(232, 163, 61, 0.18);
+  color: var(--gold);
+  border-color: var(--gold);
+}
+
+.menu-page-list {
+  max-width: 760px;
+  margin: 0 auto;
+}
 
 .menu-tabsish {
   display: grid;
@@ -1008,6 +1114,245 @@ a {
   margin-top: 1rem;
 }
 
+/* ---------- Events ---------- */
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.event-card {
+  background: var(--navy-soft);
+  border: 1px solid rgba(232, 163, 61, 0.15);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s, border-color 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(232, 163, 61, 0.5);
+}
+
+.event-card .thumb {
+  height: 210px;
+  overflow: hidden;
+  position: relative;
+}
+
+.event-card .thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.event-card:hover .thumb img {
+  transform: scale(1.07);
+}
+
+.event-card .date-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(14, 28, 43, 0.9);
+  border: 1px solid rgba(232, 163, 61, 0.45);
+  border-radius: 10px;
+  padding: 0.45rem 0.7rem;
+  text-align: center;
+  min-width: 58px;
+}
+
+.event-card .date-badge .day {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.event-card .date-badge .month {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+}
+
+.event-card .body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.event-card h3 {
+  font-family: var(--font-heading);
+  color: var(--gold-soft);
+  font-size: 1.2rem;
+  margin-bottom: 0.55rem;
+}
+
+.event-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.2rem;
+  margin-bottom: 0.9rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+}
+
+.event-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.event-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.2rem;
+  flex: 1;
+}
+
+.event-detail {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.event-detail .media img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(232, 163, 61, 0.2);
+}
+
+.event-detail .content h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: var(--cream);
+  margin-bottom: 1rem;
+}
+
+.event-detail .content p {
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.event-info-box {
+  margin-top: 1.8rem;
+  padding: 1.4rem 1.5rem;
+  background: var(--navy-soft);
+  border: 1px solid rgba(232, 163, 61, 0.2);
+  border-radius: var(--radius);
+}
+
+.event-info-box h3 {
+  font-family: var(--font-heading);
+  color: var(--gold);
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.event-info-box ul {
+  list-style: none;
+}
+
+.event-info-box li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px dashed rgba(232, 163, 61, 0.15);
+  color: var(--cream-dim);
+  font-size: 0.95rem;
+}
+
+.event-info-box li:last-child {
+  border-bottom: none;
+}
+
+.event-info-box li strong {
+  color: var(--gold-soft);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.event-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.8rem;
+}
+
+.feature-list {
+  list-style: none;
+  margin: 1.5rem 0 2rem;
+}
+
+.feature-list li {
+  position: relative;
+  padding: 0.55rem 0 0.55rem 1.6rem;
+  color: var(--cream-dim);
+  border-bottom: 1px dashed rgba(232, 163, 61, 0.12);
+}
+
+.feature-list li::before {
+  content: "⚓";
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-size: 0.8rem;
+}
+
+/* ---------- 404 ---------- */
+
+.error-page {
+  min-height: 72vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 5rem 1rem;
+}
+
+.error-page .code {
+  font-family: var(--font-display);
+  font-size: clamp(5rem, 18vw, 9rem);
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+
+.error-page h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  color: var(--cream);
+  margin-bottom: 0.8rem;
+}
+
+.error-page p {
+  color: var(--text-muted);
+  max-width: 460px;
+  margin: 0 auto 2rem;
+}
+
+.error-page .actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
 /* ---------- CTA band ---------- */
 
 .cta-band {
@@ -1168,6 +1513,7 @@ a {
 @media (max-width: 900px) {
   .room-feature,
   .about-grid,
+  .event-detail,
   .res-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -1206,12 +1552,69 @@ a {
   }
 
   .nav-links.open {
-    max-height: 420px;
+    max-height: 980px;
   }
 
   .nav-links li {
     text-align: center;
     padding: 0.9rem 0;
+  }
+
+  .has-dropdown {
+    padding: 0;
+  }
+
+  .has-dropdown > a {
+    justify-content: center;
+    width: 100%;
+    padding: 0.9rem 0;
+  }
+
+  .dropdown {
+    position: static;
+    transform: none;
+    min-width: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .dropdown::before {
+    display: none;
+  }
+
+  .has-dropdown.open > .dropdown,
+  .has-dropdown:focus-within > .dropdown {
+    max-height: 320px;
+  }
+
+  .has-dropdown:hover > .dropdown {
+    max-height: 0;
+  }
+
+  .has-dropdown.open:hover > .dropdown {
+    max-height: 320px;
+  }
+
+  .dropdown li {
+    text-align: center;
+    padding: 0;
+  }
+
+  .dropdown a {
+    padding: 0.7rem 1rem;
+    font-size: 0.78rem;
+    color: var(--text-muted);
   }
 
   .form-grid {

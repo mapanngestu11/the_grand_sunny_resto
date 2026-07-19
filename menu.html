@@ -20,7 +20,25 @@
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="rooms.html">Our Rooms</a></li>
-        <li><a href="menu.html" class="active">Menu</a></li>
+        <li class="has-dropdown">
+          <a href="menu.html" class="active">Menu</a>
+          <ul class="dropdown">
+            <li><a href="menu.html" class="active">Full Menu</a></li>
+            <li><a href="menu-starters.html">Starters</a></li>
+            <li><a href="menu-mains.html">Main Courses</a></li>
+            <li><a href="menu-desserts.html">Desserts</a></li>
+            <li><a href="menu-wine.html">Wine &amp; Beverages</a></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <a href="events.html">Events</a>
+          <ul class="dropdown">
+            <li><a href="events.html">Upcoming Events</a></li>
+            <li><a href="events-private.html">Private Events</a></li>
+            <li><a href="events-catering.html">Catering</a></li>
+          </ul>
+        </li>
         <li><a href="about.html">About</a></li>
         <li><a href="reservation.html">Reservation</a></li>
       </ul>
@@ -43,6 +61,14 @@
         <p>Our chef's proudest plates, bound in the ship's log. Turn the pages to explore the full menu.</p>
         <div class="divider"></div>
       </div>
+
+      <nav class="menu-cats reveal" aria-label="Menu categories">
+        <a href="menu.html" class="active">Full Menu</a>
+        <a href="menu-starters.html">Starters</a>
+        <a href="menu-mains.html">Main Courses</a>
+        <a href="menu-desserts.html">Desserts</a>
+        <a href="menu-wine.html">Wine &amp; Beverages</a>
+      </nav>
 
       <div class="flipbook-wrap reveal">
         <div class="flipbook" id="menuBook">

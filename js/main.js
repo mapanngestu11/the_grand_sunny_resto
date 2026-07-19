@@ -43,6 +43,13 @@ document.querySelectorAll("a[href]").forEach((link) => {
 
   link.addEventListener("click", (e) => {
     if (e.metaKey || e.ctrlKey || e.shiftKey || link.target === "_blank") return;
+
+    // Let mobile dropdown toggles open the submenu instead of navigating
+    const isDropdownToggle =
+      link.parentElement?.classList.contains("has-dropdown") &&
+      window.innerWidth <= 720;
+    if (isDropdownToggle) return;
+
     e.preventDefault();
     pageTransition.classList.remove("hidden");
     setTimeout(() => {
@@ -62,6 +69,18 @@ if (navToggle && navLinks) {
     navToggle.setAttribute("aria-expanded", expanded);
   });
 }
+
+// Dropdown menus (click on mobile, hover on desktop)
+document.querySelectorAll(".has-dropdown").forEach((item) => {
+  const trigger = item.querySelector(":scope > a");
+  if (!trigger) return;
+
+  trigger.addEventListener("click", (e) => {
+    if (window.innerWidth > 720) return;
+    e.preventDefault();
+    item.classList.toggle("open");
+  });
+});
 
 // Scroll reveal animation
 const revealElements = document.querySelectorAll(".reveal");
